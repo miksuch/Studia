@@ -192,7 +192,7 @@ public class MyEditor {
                 try {
                     if (!selectedFile.exists() && !selectedFile.createNewFile() ) {// if doesnt exist and failed to create new file
                         // handling
-                        System.out.print("error msg\n");
+                        return;
                     }
                 }
                 catch( IOException ex ){
@@ -211,6 +211,7 @@ public class MyEditor {
                     }
                 } catch (FileNotFoundException ex) {
                     // handling
+                    return;
                 }
             }
         });
